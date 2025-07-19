@@ -4,7 +4,7 @@ import com.mysom.sample.domain.City
 import com.mysom.sample.domain.CityName
 import com.mysom.sample.domain.User
 import com.mysom.sample.domain.UserName
-import com.mysom.sample.entity.SampleRepositoryOperations
+import com.mysom.sample.repository.SampleRepositoryOperations
 import io.github.oshai.kotlinlogging.KotlinLogging
 import org.jetbrains.exposed.v1.core.StdOutSqlLogger
 import org.jetbrains.exposed.v1.jdbc.transactions.transaction

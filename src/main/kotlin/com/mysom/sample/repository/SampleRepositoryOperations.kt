@@ -1,4 +1,4 @@
-package com.mysom.sample.entity
+package com.mysom.sample.repository
 
 import com.mysom.sample.domain.City
 import com.mysom.sample.domain.User

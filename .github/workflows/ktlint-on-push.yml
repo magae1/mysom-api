@@ -1,0 +1,29 @@
+name: Ktlint(Kotlin Lint) Formatting on Push
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'build.gradle.kts'
+
+jobs:
+  fomatting:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Run Ktlint formatter
+        run: ./gradlew ktlintFormat
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: ":art: Ktlint 자동 적용"

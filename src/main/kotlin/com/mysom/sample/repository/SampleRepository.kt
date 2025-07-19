@@ -1,4 +1,4 @@
-package com.mysom.sample.entity
+package com.mysom.sample.repository
 
 import com.mysom.infrastructure.sql.entity.CityTable
 import com.mysom.infrastructure.sql.entity.UserTable
